@@ -15,6 +15,6 @@ Since there is the possibility of false positives with CloudWatch alarms, we don
 Lines 27 - 40 send the request to reboot the instance.
 
 # Testing
-When testing this in your own AWS environment, you can force failed CloudWatch checks by setting your alarm threshold to be greater than or equal to zero rather than just greater than zero.
+When testing this in your own AWS environment, you can force failed CloudWatch checks by setting your alarm threshold to be greater than or equal to zero, rather than just greater than zero.
 
-I would recommend testing against Linux instances because Windows instances are billed a minimum of an hour everytime the instance is stopped and started. If you do test against a Linux instance, before changing the CloudWatch alarm threshold start a ping test to it's public IP because small Linux instances stop and start so fast that the EC2 console doesn't update the status in time.
+I would recommend testing against Linux instances because Windows instances are billed a minimum of an hour every time the instance is stopped and started. If you do test against a Linux instance, before changing the CloudWatch alarm threshold start a ping test to it's public IP because small Linux instances stop and start so fast that the EC2 console doesn't update the status in time.
