@@ -54,10 +54,14 @@ Python script you can run in AWS Lambda to automatically reboot EC2 Instances wi
 ## Upload the Code
 - **Only perform these next steps after everything in the ‘AWS Environment Configuration’ has been completed.**
 - The following assumes you have named everything exactly as told to above. If you have changed any of the script names or Lambda function names, the commands below will need to be tweaked accordingly. I’m also assuming you have each of the three folders containing the scripts on your systems desktop.
-- Open terminal and type ‘cd desktop’
-- Type ‘aws configure’ and enter the ‘AWS Access Key ID’ and ‘AWS Secret Access Key’ for the LambdaUpdateFunctionCodeCLI user created earlier. Enter the region name you are operating in. Leave the ‘Default output format’ as ‘None’.
-  - cd RebootUnresponsiveInstancesBasedOnTime
-  - aws lambda update-function-code --function-name RebootUnresponsiveInstancesBasedOnTime --zip-file fileb:// RebootUnresponsiveInstancesBasedOnTime.zip
+- Open terminal and type `cd desktop`
+- Type `aws configure` and enter the ‘AWS Access Key ID’ and ‘AWS Secret Access Key’ for the LambdaUpdateFunctionCodeCLI user created earlier. Enter the region name you are operating in. Leave the ‘Default output format’ as ‘None’.
+  - `cd RebootUnresponsiveInstancesBasedOnTime`
+  - `cd package`
+  - `zip -r9 ../RebootUnresponsiveInstancesBasedOnTime.zip .`
+  - `cd ../`
+  - `zip -g RebootUnresponsiveInstancesBasedOnTime.zip RebootUnresponsiveInstancesBasedOnTime.py
+  - `aws lambda update-function-code --function-name RebootUnresponsiveInstancesBasedOnTime --zip-file fileb:// RebootUnresponsiveInstancesBasedOnTime.zip`
 
 
 ## Testing
