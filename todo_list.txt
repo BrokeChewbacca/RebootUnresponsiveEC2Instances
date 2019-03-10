@@ -1,2 +1,0 @@
-- Check if it is daylight savings time so you don't have to remember to change the time period.
-- Add ability to schedule reboots using SQS if the Lambda function runs during the business hours time period.
