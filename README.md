@@ -60,7 +60,7 @@ Python script you can run in AWS Lambda to automatically reboot EC2 Instances wi
   - `cd package`
   - `zip -r9 ../RebootUnresponsiveInstancesBasedOnTime.zip .`
   - `cd ../`
-  - `zip -g RebootUnresponsiveInstancesBasedOnTime.zip RebootUnresponsiveInstancesBasedOnTime.py
+  - `zip -g RebootUnresponsiveInstancesBasedOnTime.zip RebootUnresponsiveInstancesBasedOnTime.py`
   - `aws lambda update-function-code --function-name RebootUnresponsiveInstancesBasedOnTime --zip-file fileb:// RebootUnresponsiveInstancesBasedOnTime.zip`
 
 
